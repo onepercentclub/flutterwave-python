@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='Flutterwave',
 
-    version='1.0.4.1',
+    version='1.0.5',
 
     description='Flutterwave',
     long_description=long_description,

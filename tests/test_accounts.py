@@ -28,67 +28,67 @@ class TestAccounts(unittest.TestCase):
     bankcode = "044"
 
 
-    # def test1AccountTokenize(self):
-    #     print "\n---------###-- Flutterwave Account Tokenize --###------------"
-    #     r = flw.account.tokenize(debitAccount, country)
-    #     d = json.loads(r.text)
+    def test1AccountTokenize(self):
+        print "\n---------###-- Flutterwave Account Tokenize --###------------"
+        r = flw.account.tokenize(debitAccount, country)
+        d = json.loads(r.text)
 
-    #     global transactionReference
-    #     transactionReference = d["data"]["transactionReference"]
+        global transactionReference
+        transactionReference = d["data"]["transactionReference"]
 
-    #     # self.assertEqual(d["data"]["responseCode"], "00")
-    #     print "{}".format(r.text)
+        # self.assertEqual(d["data"]["responseCode"], "00")
+        print "{}".format(r.text)
         
 
-    # def test2AccountValidate(self):
-    #     print "\n---------###-- Flutterwave Account Tokenize Validate --###------------"
-    #     data = {
-    #         "amount": amount,
-    #         "ref": transactionReference,
-    #         "otp": otp,
-    #         "accountNumber": debitAccount,
-    #         "narration": narration,
-    #         "country": country
-    #     }
-    #     r = flw.account.validate(data)
-    #     d = json.loads(r.text)
+    def test2AccountValidate(self):
+        print "\n---------###-- Flutterwave Account Tokenize Validate --###------------"
+        data = {
+            "amount": amount,
+            "ref": transactionReference,
+            "otp": otp,
+            "accountNumber": debitAccount,
+            "narration": narration,
+            "country": country
+        }
+        r = flw.account.validate(data)
+        d = json.loads(r.text)
 
-    #     global token
-    #     token = d["data"]["accountToken"]
+        global token
+        token = d["data"]["accountToken"]
         
-    #     # self.assertEqual(d["data"]["responsecode"], "00")
-    #     print "{}".format(r.text)
+        # self.assertEqual(d["data"]["responsecode"], "00")
+        print "{}".format(r.text)
 
 
-    # def test3AccountCharge(self):
-    #     print "\n---------###-- Flutterwave Account Charge --###------------"
-    #     data = {
-    #         "amount": amount,
-    #         "token": token,
-    #         "narration": narration,
-    #         "country": country
-    #     }
+    def test3AccountCharge(self):
+        print "\n---------###-- Flutterwave Account Charge --###------------"
+        data = {
+            "amount": amount,
+            "token": token,
+            "narration": narration,
+            "country": country
+        }
 
-    #     r = flw.account.charge(data)
-    #     d = json.loads(r.text)
+        r = flw.account.charge(data)
+        d = json.loads(r.text)
         
-    #     # self.assertEqual(d["data"]["responseCode"], "00")
-    #     print "{}".format(r.text)
+        # self.assertEqual(d["data"]["responseCode"], "00")
+        print "{}".format(r.text)
 
 
-    # def test4AccountLookup(self):
-    #     print "\n---------###-- Flutterwave Account Lookup --###------------"
-    #     data = {
-    #         "destBankCode": bankcode,
-    #         "recipientAccount": debitAccount,
-    #         "country": country
-    #     }
+    def test4AccountLookup(self):
+        print "\n---------###-- Flutterwave Account Lookup --###------------"
+        data = {
+            "destBankCode": bankcode,
+            "recipientAccount": debitAccount,
+            "country": country
+        }
 
-    #     r = flw.account.lookup(data)
-    #     d = json.loads(r.text)
+        r = flw.account.lookup(data)
+        d = json.loads(r.text)
         
-    #     # self.assertEqual(d["data"]["responseCode"], "00")
-    #     print "{}".format(r.text)
+        # self.assertEqual(d["data"]["responseCode"], "00")
+        print "{}".format(r.text)
 
 
     def test5ChargeAny(self):
