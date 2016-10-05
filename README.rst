@@ -20,9 +20,13 @@ See http://www.pip-installer.org/en/latest/index.html for instructions
 on installing pip. If you are on a system with easy_install but not
 pip, you can use easy_install instead.
 
-To install from source, run::
+To install from source, clone this repo, then run from directory::
 
     python setup.py install
+
+Linux users may require missing python headers for the crypto library, run this to install::
+
+    sudo apt-get update; sudo apt-get install python-dev -y
 
 =================
 API Services

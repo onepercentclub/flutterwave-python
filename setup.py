@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='Flutterwave',
 
-    version='1.0.5',
+    version='1.0.6',
 
     description='Flutterwave',
     long_description=long_description,
@@ -34,7 +34,7 @@ setup(
 
     packages=find_packages(exclude=[]),
 
-    install_requires=['requests', 'Crypto'],
+    install_requires=['requests', 'Crypto', 'pycrypto'],
 
     entry_points={}
 )
