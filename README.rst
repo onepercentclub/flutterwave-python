@@ -78,6 +78,24 @@ Find more examples `here <https://github.com/Flutterwave/flutterwave-python/tree
 Sign up at http://flutterwave.com for API keys.
 
 ============
+Setup
+============
+
+Optional Setup Paremeters
+
+    =========  ====================================================================
+    Parameter  Description
+    =========  ====================================================================
+    env        (staging, production) sets the library to development or live
+    baseUrl    sets the base url used internally
+    debug      enables request and response logging to console.
+    =========  ====================================================================
+
+After development, the go-live process requires live keys and an optional argument
+
+    flw = Flutterwave("<api_key_live>", "<merchant_key_live>", {"env":"production"})
+
+============
 Testing
 ============
 

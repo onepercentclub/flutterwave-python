@@ -16,6 +16,7 @@ class Utils(object):
 
         # BaseUrl
         self.baseUrl = "http://staging1flutterwave.co:8080"
+        self.baseUrl_live = "https://prod1flutterwave.co:8181"
 
         # Routes
         self.ipCheckRoute = "/pwc/rest/fw/ipcheck/"

@@ -23,6 +23,9 @@ class Flutterwave():
 
         self.util = Utils(apiKey, merchantKey)
 
+        if('env' in options and options["env"] == 'production'):
+            self.util.baseUrl = self.util.baseUrl_live
+
         if("baseUrl" in options):
             self.util.setBaseUrl(options["baseUrl"])
 
