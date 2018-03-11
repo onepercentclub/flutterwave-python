@@ -103,7 +103,7 @@ class Utils(object):
             print "{} :: {}{}".format(">>> URL", self.baseUrl, url)
             print "{} :: {}".format(">>> PAYLOAD",payload)
 
-        r = requests.post("{}{}".format(self.baseUrl, url), json=payload, headers={})
+        r = requests.post("{}{}".format(self.baseUrl, url), json=payload, headers={}, verify=False)
 
         if(self.debug):
             print "{} :: {} - {}".format(">>> RESPONSE", r.status_code, r.text)
