@@ -15,8 +15,8 @@ class Utils(object):
         self.merchantKey = merchantKey
 
         # BaseUrl
-        self.baseUrl = "http://staging1flutterwave.co:8080"
-        self.baseUrl_live = "https://prod1flutterwave.co:8181"
+        self.baseUrl = "https://flutterwavestagingv2.com"
+        self.baseUrl_live = "https://flutterwaveprodv2.com"
 
         # Routes
         self.ipCheckRoute = "/pwc/rest/fw/ipcheck/"
